@@ -5,15 +5,15 @@ template<class T>
 T squaring(T a) {
     return a * a;
 }
-template<>
-std::vector<int> squaring(std::vector<int> a) {
+template<class T>
+std::vector<T> squaring(std::vector<T> a) {
     for (int i = 0; i < a.size(); ++i) {
         a[i] = a[i] * a[i];
     }
     return a;
 }
-
-void output_vector(std::vector<int> a) {
+template<class T>
+void output_vector(std::vector<T> a) {
     for (int b : a) {
         std::cout << " " << b << ",";
     }
